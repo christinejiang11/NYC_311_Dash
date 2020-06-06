@@ -1,0 +1,86 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.4.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="5b775907-3dce-44bb-bda2-a1e0128198ad" data-root-id="1050"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1150">
+          {"e90dbae3-58f9-48e7-8910-93ac908ba570":{"roots":{"references":[{"attributes":{"bar_color":"#a5bab7","callback":null,"end":1591315200000.0,"start":1577836800000.0,"title":"Date Range: ","value":[1577836800000.0,1591315200000.0]},"id":"1002","type":"DateRangeSlider"},{"attributes":{"callback":null,"factors":["11 PM","10 PM","09 PM","08 PM","07 PM","06 PM","05 PM","04 PM","03 PM","02 PM","01 PM","12 PM","11 AM","10 AM","09 AM","08 AM","07 AM","06 AM","05 AM","04 AM","03 AM","02 AM","01 AM","12 AM"]},"id":"1010","type":"FactorRange"},{"attributes":{"color_mapper":{"id":"1004","type":"LinearColorMapper"},"formatter":{"id":"1056","type":"BasicTickFormatter"},"location":[0,0],"scale_alpha":0.7,"ticker":{"id":"1042","type":"BasicTicker"}},"id":"1043","type":"ColorBar"},{"attributes":{"desired_num_ticks":13},"id":"1042","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"height":{"units":"data","value":1},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"width":{"units":"data","value":1},"x":{"field":"x"},"y":{"field":"y"}},"id":"1039","type":"Rect"},{"attributes":{"children":[{"id":"1047","type":"WidgetBox"},{"id":"1005","subtype":"Figure","type":"Plot"}]},"id":"1048","type":"Row"},{"attributes":{},"id":"1017","type":"CategoricalTicker"},{"attributes":{},"id":"1028","type":"ResetTool"},{"attributes":{"child":{"id":"1048","type":"Row"},"title":"Calls by Day/Hour"},"id":"1049","type":"Panel"},{"attributes":{"callback":null,"tabs":[{"id":"1049","type":"Panel"}]},"id":"1050","type":"Tabs"},{"attributes":{},"id":"1024","type":"PanTool"},{"attributes":{"align":"center","text":"Calls by Day and Hour","text_color":{"value":"dimgray"},"text_font":"avenir","text_font_size":{"value":"19pt"},"text_font_style":"normal"},"id":"1006","type":"Title"},{"attributes":{"data_source":{"id":"1003","type":"ColumnDataSource"},"glyph":{"id":"1038","type":"Rect"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1039","type":"Rect"},"selection_glyph":null,"view":{"id":"1041","type":"CDSView"}},"id":"1040","type":"GlyphRenderer"},{"attributes":{},"id":"1021","type":"CategoricalTicker"},{"attributes":{},"id":"1057","type":"Selection"},{"attributes":{},"id":"1025","type":"WheelZoomTool"},{"attributes":{"axis_label":"Time of Day","axis_label_text_color":{"value":"dimgray"},"axis_label_text_font":"avenir","axis_label_text_font_size":{"value":"12pt"},"axis_label_text_font_style":"normal","formatter":{"id":"1054","type":"CategoricalTickFormatter"},"major_label_text_color":{"value":"dimgray"},"major_label_text_font":"avenir","major_label_text_font_size":{"value":"10pt"},"ticker":{"id":"1021","type":"CategoricalTicker"}},"id":"1020","type":"CategoricalAxis"},{"attributes":{},"id":"1056","type":"BasicTickFormatter"},{"attributes":{"ticker":{"id":"1017","type":"CategoricalTicker"},"visible":false},"id":"1019","type":"Grid"},{"attributes":{},"id":"1027","type":"SaveTool"},{"attributes":{"high":6748,"low":706,"palette":["#000003","#000004","#000006","#010007","#010109","#01010B","#02020D","#02020F","#030311","#040313","#040415","#050417","#060519","#07051B","#08061D","#09071F","#0A0722","#0B0824","#0C0926","#0D0A28","#0E0A2A","#0F0B2C","#100C2F","#110C31","#120D33","#140D35","#150E38","#160E3A","#170F3C","#180F3F","#1A1041","#1B1044","#1C1046","#1E1049","#1F114B","#20114D","#221150","#231152","#251155","#261157","#281159","#2A115C","#2B115E","#2D1060","#2F1062","#301065","#321067","#341068","#350F6A","#370F6C","#390F6E","#3B0F6F","#3C0F71","#3E0F72","#400F73","#420F74","#430F75","#450F76","#470F77","#481078","#4A1079","#4B1079","#4D117A","#4F117B","#50127B","#52127C","#53137C","#55137D","#57147D","#58157E","#5A157E","#5B167E","#5D177E","#5E177F","#60187F","#61187F","#63197F","#651A80","#661A80","#681B80","#691C80","#6B1C80","#6C1D80","#6E1E81","#6F1E81","#711F81","#731F81","#742081","#762181","#772181","#792281","#7A2281","#7C2381","#7E2481","#7F2481","#812581","#822581","#842681","#852681","#872781","#892881","#8A2881","#8C2980","#8D2980","#8F2A80","#912A80","#922B80","#942B80","#952C80","#972C7F","#992D7F","#9A2D7F","#9C2E7F","#9E2E7E","#9F2F7E","#A12F7E","#A3307E","#A4307D","#A6317D","#A7317D","#A9327C","#AB337C","#AC337B","#AE347B","#B0347B","#B1357A","#B3357A","#B53679","#B63679","#B83778","#B93778","#BB3877","#BD3977","#BE3976","#C03A75","#C23A75","#C33B74","#C53C74","#C63C73","#C83D72","#CA3E72","#CB3E71","#CD3F70","#CE4070","#D0416F","#D1426E","#D3426D","#D4436D","#D6446C","#D7456B","#D9466A","#DA4769","#DC4869","#DD4968","#DE4A67","#E04B66","#E14C66","#E24D65","#E44E64","#E55063","#E65162","#E75262","#E85461","#EA5560","#EB5660","#EC585F","#ED595F","#EE5B5E","#EE5D5D","#EF5E5D","#F0605D","#F1615C","#F2635C","#F3655C","#F3675B","#F4685B","#F56A5B","#F56C5B","#F66E5B","#F6705B","#F7715B","#F7735C","#F8755C","#F8775C","#F9795C","#F97B5D","#F97D5D","#FA7F5E","#FA805E","#FA825F","#FB8460","#FB8660","#FB8861","#FB8A62","#FC8C63","#FC8E63","#FC9064","#FC9265","#FC9366","#FD9567","#FD9768","#FD9969","#FD9B6A","#FD9D6B","#FD9F6C","#FDA16E","#FDA26F","#FDA470","#FEA671","#FEA873","#FEAA74","#FEAC75","#FEAE76","#FEAF78","#FEB179","#FEB37B","#FEB57C","#FEB77D","#FEB97F","#FEBB80","#FEBC82","#FEBE83","#FEC085","#FEC286","#FEC488","#FEC689","#FEC78B","#FEC98D","#FECB8E","#FDCD90","#FDCF92","#FDD193","#FDD295","#FDD497","#FDD698","#FDD89A","#FDDA9C","#FDDC9D","#FDDD9F","#FDDFA1","#FDE1A3","#FCE3A5","#FCE5A6","#FCE6A8","#FCE8AA","#FCEAAC","#FCECAE","#FCEEB0","#FCF0B1","#FCF1B3","#FCF3B5","#FCF5B7","#FBF7B9","#FBF9BB","#FBFABD","#FBFCBF"]},"id":"1004","type":"LinearColorMapper"},{"attributes":{"callback":null,"data":{"index":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167],"value":[1788,5014,1254,5682,890,5332,775,4847,970,4645,1550,4566,2701,5003,4413,4866,5588,5275,5342,5336,5264,4785,2667,5065,2342,5427,1497,5843,1022,5578,839,5417,908,4917,1484,5037,2685,4983,4051,4745,6035,4956,6010,5250,5739,4286,3416,5674,3002,4604,2021,4974,1397,4752,1002,5255,983,5163,1214,5153,1955,5174,3076,5260,3850,5653,3980,6222,4335,6046,4286,4624,3927,4491,2548,4612,1763,4628,1152,4996,891,5083,1030,5033,1735,5188,2491,5282,3232,5413,3718,5598,4064,4802,5090,4165,1687,5206,1149,5953,810,5179,706,4860,889,4209,1510,4120,2805,4043,4398,4058,6193,4194,5864,4198,5707,3635,2695,5591,1872,5726,1323,6214,928,6045,784,6169,899,5377,1596,4993,3003,4957,4582,4799,6292,4606,6392,4895,6748,3965,3073,6085,1750,5584,1178,6387,876,5548,795,5354,972,4999,1662,5024,3028,4377,4651,4358,5930,4203,5911,4195,5807,3697,2929,5542],"x":["Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Friday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Saturday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Sunday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday"],"y":["01 AM","01 PM","02 AM","02 PM","03 AM","03 PM","04 AM","04 PM","05 AM","05 PM","06 AM","06 PM","07 AM","07 PM","08 AM","08 PM","09 AM","09 PM","10 AM","10 PM","11 AM","11 PM","12 AM","12 PM","01 AM","01 PM","02 AM","02 PM","03 AM","03 PM","04 AM","04 PM","05 AM","05 PM","06 AM","06 PM","07 AM","07 PM","08 AM","08 PM","09 AM","09 PM","10 AM","10 PM","11 AM","11 PM","12 AM","12 PM","01 AM","01 PM","02 AM","02 PM","03 AM","03 PM","04 AM","04 PM","05 AM","05 PM","06 AM","06 PM","07 AM","07 PM","08 AM","08 PM","09 AM","09 PM","10 AM","10 PM","11 AM","11 PM","12 AM","12 PM","01 AM","01 PM","02 AM","02 PM","03 AM","03 PM","04 AM","04 PM","05 AM","05 PM","06 AM","06 PM","07 AM","07 PM","08 AM","08 PM","09 AM","09 PM","10 AM","10 PM","11 AM","11 PM","12 AM","12 PM","01 AM","01 PM","02 AM","02 PM","03 AM","03 PM","04 AM","04 PM","05 AM","05 PM","06 AM","06 PM","07 AM","07 PM","08 AM","08 PM","09 AM","09 PM","10 AM","10 PM","11 AM","11 PM","12 AM","12 PM","01 AM","01 PM","02 AM","02 PM","03 AM","03 PM","04 AM","04 PM","05 AM","05 PM","06 AM","06 PM","07 AM","07 PM","08 AM","08 PM","09 AM","09 PM","10 AM","10 PM","11 AM","11 PM","12 AM","12 PM","01 AM","01 PM","02 AM","02 PM","03 AM","03 PM","04 AM","04 PM","05 AM","05 PM","06 AM","06 PM","07 AM","07 PM","08 AM","08 PM","09 AM","09 PM","10 AM","10 PM","11 AM","11 PM","12 AM","12 PM"]},"selected":{"id":"1057","type":"Selection"},"selection_policy":{"id":"1058","type":"UnionRenderers"}},"id":"1003","type":"ColumnDataSource"},{"attributes":{"callback":null,"tooltips":[["hour","@y"],["created_weekday","@x"],["Calls","@value{0,0}"]]},"id":"1045","type":"HoverTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1024","type":"PanTool"},{"id":"1025","type":"WheelZoomTool"},{"id":"1026","type":"BoxZoomTool"},{"id":"1027","type":"SaveTool"},{"id":"1028","type":"ResetTool"},{"id":"1029","type":"HelpTool"},{"id":"1045","type":"HoverTool"}]},"id":"1030","type":"Toolbar"},{"attributes":{},"id":"1052","type":"CategoricalTickFormatter"},{"attributes":{"source":{"id":"1003","type":"ColumnDataSource"}},"id":"1041","type":"CDSView"},{"attributes":{},"id":"1054","type":"CategoricalTickFormatter"},{"attributes":{},"id":"1029","type":"HelpTool"},{"attributes":{"overlay":{"id":"1059","type":"BoxAnnotation"}},"id":"1026","type":"BoxZoomTool"},{"attributes":{},"id":"1058","type":"UnionRenderers"},{"attributes":{"below":[{"id":"1016","type":"CategoricalAxis"}],"center":[{"id":"1019","type":"Grid"},{"id":"1023","type":"Grid"}],"left":[{"id":"1020","type":"CategoricalAxis"}],"plot_height":700,"plot_width":1100,"renderers":[{"id":"1040","type":"GlyphRenderer"}],"right":[{"id":"1043","type":"ColorBar"}],"title":{"id":"1006","type":"Title"},"toolbar":{"id":"1030","type":"Toolbar"},"x_range":{"id":"1008","type":"FactorRange"},"x_scale":{"id":"1012","type":"CategoricalScale"},"y_range":{"id":"1010","type":"FactorRange"},"y_scale":{"id":"1014","type":"CategoricalScale"}},"id":"1005","subtype":"Figure","type":"Plot"},{"attributes":{"dimension":1,"ticker":{"id":"1021","type":"CategoricalTicker"},"visible":false},"id":"1023","type":"Grid"},{"attributes":{"axis_label":"Day of Week","axis_label_text_color":{"value":"dimgray"},"axis_label_text_font":"avenir","axis_label_text_font_size":{"value":"12pt"},"axis_label_text_font_style":"normal","formatter":{"id":"1052","type":"CategoricalTickFormatter"},"major_label_orientation":"vertical","major_label_text_color":{"value":"dimgray"},"major_label_text_font":"avenir","major_label_text_font_size":{"value":"10pt"},"ticker":{"id":"1017","type":"CategoricalTicker"}},"id":"1016","type":"CategoricalAxis"},{"attributes":{"active":[0,1,2,3,4,5],"callback":null,"labels":["Bronx","Brooklyn","Manhattan","Queens","Staten_Island","Unspecified"]},"id":"1001","type":"CheckboxGroup"},{"attributes":{"fill_alpha":{"value":0.7},"fill_color":{"field":"value","transform":{"id":"1004","type":"LinearColorMapper"}},"height":{"units":"data","value":1},"line_color":{"value":"white"},"width":{"units":"data","value":1},"x":{"field":"x"},"y":{"field":"y"}},"id":"1038","type":"Rect"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1059","type":"BoxAnnotation"},{"attributes":{"children":[{"id":"1002","type":"DateRangeSlider"},{"id":"1001","type":"CheckboxGroup"}]},"id":"1047","type":"WidgetBox"},{"attributes":{},"id":"1014","type":"CategoricalScale"},{"attributes":{},"id":"1012","type":"CategoricalScale"},{"attributes":{"callback":null,"factors":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]},"id":"1008","type":"FactorRange"}],"root_ids":["1050"]},"title":"Bokeh Application","version":"1.4.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1150').textContent;
+                  var render_items = [{"docid":"e90dbae3-58f9-48e7-8910-93ac908ba570","roots":{"1050":"5b775907-3dce-44bb-bda2-a1e0128198ad"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
