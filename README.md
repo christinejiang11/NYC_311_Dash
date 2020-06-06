@@ -8,8 +8,10 @@
 ![](categorygif.gif)
 
 ### Calls by Time:
+![](timefig.gif)
 
 ### Calls by Type:
+![](typegif.gif)
 
 ## Setup:
 1. `git clone https://github.com/christinejiang11/NYC_311_Dash.git`
