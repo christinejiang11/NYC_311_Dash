@@ -2,10 +2,10 @@
 311 is a non-emergency phone number that people can call in many cities to find information about services, make complaints, or report problems like graffiti or road damage. Curious about the effects of the pandemic and BLM protests on the volume and location of these calls, I created an interactive dashboard in Bokeh to explore the effects of recent events on 311 call volume. 
 
 ### Calls by Location:
-
 ![](sample2.gif)
 
 ### Calls by Category:
+![](categorygif.gif)
 
 ### Calls by Time:
 
