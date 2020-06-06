@@ -8,7 +8,7 @@
 ![](categorygif.gif)
 
 ### Calls by Time:
-![](timefig.gif)
+![](timegif.gif)
 
 ### Calls by Type:
 ![](typegif.gif)
