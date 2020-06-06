@@ -10,8 +10,6 @@ from bokeh.plotting import output_file, show
 from bokeh.io import curdoc
 
 ################# LOAD NEW DATA ##############################
-#connect to NYC Open Data API to download NYC 311 calls data since beginning of 2020
-#if not getting new data, comment out lines 15-18 and just read CSV directly
 path = '../data/'
 orig_results = get_data()
 orig_df = pd.DataFrame(orig_results)
@@ -25,17 +23,14 @@ print(f'dataset shape: {orig_df.shape}')
 print(f'dataset size: {orig_df.memory_usage().sum()/1024**2:.2f} MB')
 
 ################# PREPROCESS AND CLEAN DATA #######################
-#export categorical value counts to google sheets
-#map categorical values to cleaned version using jaccard score (fuzzy matching metric)
 #workbook with categorical value mappings can be found here: https://bit.ly/3eSoaHA
 nyc_311_calls = preprocess(orig_df)
-columns = ['agency_name','complaint_type','descriptor','location_type','city']
 
 #export unique column values and their counts
+columns = ['agency_name','complaint_type','descriptor','location_type','city']
 export_col_values(nyc_311_calls, columns)
 
 #get dictionary of lists with clean names for each column
-#change values in column D of each tab in the google spreadsheet if you wish to change the possible output values
 valid_names = get_valid_names(columns, start='D1')
 for col in columns:
     nyc_311_calls['cleaned_'+col] = nyc_311_calls[col].apply(fuzzy_match, col=col, valid_names=valid_names)
@@ -48,12 +43,15 @@ heatmap_1 = heatmap_tab(nyc_311_calls, 'created_weekday','hour','Calls by Day an
                            x_label='Day of Week',
                            y_label='Time of Day',
                            tab_title='Calls by Day/Hour')
+
 heatmap_2 = heatmap_tab(nyc_311_calls, 'week_start','cleaned_descriptor', 'Calls by Complaint Type',
                                x_label='Week Start',
                                y_label='Complaint',
                                exclude=['Other'],
                                tab_title='Calls by Type')
+
 geomap_1 = geomap_tab(nyc_311_calls)
+
 bargraph_1 = bargraph_tab(nyc_311_calls)
 
 tabs = Tabs(tabs=[geomap_1, bargraph_1, heatmap_1, heatmap_2])
