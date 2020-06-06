@@ -13,7 +13,6 @@ from bokeh.io import output_file, show, curdoc
 
 def geomap_tab(nyc_311_calls):
     #load json file with map style
-    #map styles to choose from: girly.txt, outspoken.txt, multibrand.txt
     with open('scripts/multibrand.txt') as json_file:
         map_style_json = json.load(json_file)
     map_style = json.dumps(map_style_json)

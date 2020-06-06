@@ -3,39 +3,39 @@ import numpy as np
 import pygsheets
 from scripts.preprocess import get_data, preprocess, export_col_values, get_valid_names, fuzzy_match
 from scripts.heatmap import heatmap_tab
+from scripts.bargraph import bargraph_tab
+from scripts.geomap import geomap_tab
 from bokeh.models import Tabs
 from bokeh.plotting import output_file, show
 from bokeh.io import curdoc
-from scripts.bargraph import bargraph_tab
-from scripts.geomap import geomap_tab
 
-################# LOAD DATA ##############################
+################# LOAD NEW DATA ##############################
+#connect to NYC Open Data API to download NYC 311 calls data since beginning of 2020
+#if not getting new data, comment out lines 15-18 and just read CSV directly
 path = '../data/'
-#get data since beginning of 2020, paginating through 100000 records at a time
-### COMMENT THIS OUT IF NOT GETTING NEW DATA #############
-# orig_results = get_data()
-# orig_df = pd.DataFrame(orig_results)
-# orig_df.to_csv(path+'311_data.csv', index=False)
-##########################################################
-
-#import data with correct date types
+orig_results = get_data()
+orig_df = pd.DataFrame(orig_results)
+orig_df.to_csv(path+'311_data.csv', index=False)
 orig_df = pd.read_csv(path+'311_data.csv',
                       usecols=['unique_key', 'created_date', 'closed_date', 'agency', 'agency_name',
                             'complaint_type', 'descriptor', 'location_type', 'incident_zip', 'borough',
                             'city', 'status', 'latitude', 'longitude', 'location'],
                       parse_dates=['created_date', 'closed_date'])
-
 print(f'dataset shape: {orig_df.shape}')
 print(f'dataset size: {orig_df.memory_usage().sum()/1024**2:.2f} MB')
 
-################# PROCESS AND CLEAN DATA ##############################
-#use pygsheets to connect to data cleaning workbook
+################# PREPROCESS AND CLEAN DATA #######################
+#export categorical value counts to google sheets
+#map categorical values to cleaned version using jaccard score (fuzzy matching metric)
+#workbook with categorical value mappings can be found here: https://bit.ly/3eSoaHA
 nyc_311_calls = preprocess(orig_df)
 columns = ['agency_name','complaint_type','descriptor','location_type','city']
+
 #export unique column values and their counts
 export_col_values(nyc_311_calls, columns)
-#get dictionary of lists with valid names for each column
-#change values in column D of each tab if you wish to change the possible output values
+
+#get dictionary of lists with clean names for each column
+#change values in column D of each tab in the google spreadsheet if you wish to change the possible output values
 valid_names = get_valid_names(columns, start='D1')
 for col in columns:
     nyc_311_calls['cleaned_'+col] = nyc_311_calls[col].apply(fuzzy_match, col=col, valid_names=valid_names)

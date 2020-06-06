@@ -83,7 +83,6 @@ def bargraph_tab(nyc_311_calls):
         new_src = make_dataset(boroughs_to_plot, category_to_plot, start_date, end_date)
         src.data.update(new_src.data)
 
-        #this isn't working - trying to plot new y axis and x axis label given values chosen
         category_to_plot_values = list(src.data[category_to_plot])
         p = figure(y_range=category_to_plot_values, title=category_to_plot, plot_height=700, plot_width=1100)
         p.hbar_stack(boroughs_to_plot, y=category_to_plot, height=0.9, source=src, color=colors, legend=[x.lower() for x in boroughs_to_plot])
