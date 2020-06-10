@@ -42,7 +42,6 @@ $ bokeh serve --show main.py
 ```
 
 ## Libraries
-The following libraries were used in this project:
 - [bokeh](https://docs.bokeh.org/en/latest/index.html)
 - [sodapy](https://github.com/xmunoz/sodapy)
 - [pygsheets](https://pygsheets.readthedocs.io/en/stable/)
