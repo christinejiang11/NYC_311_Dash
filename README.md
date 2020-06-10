@@ -1,8 +1,8 @@
 # NYC_311_Dash
-Interactive bokeh dashboard to visualize 311 (non-emergency) call activity in NYC, since the beginning of 2020 onwards. 
+Interactive [Bokeh](https://docs.bokeh.org/en/latest/index.html) dashboard to visualize 311 (non-emergency) call activity in NYC, since the beginning of 2020 onwards. The dashboard is powered by the [311 Service Requests](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9) dataset from NYC Open Data.
 
 ### Calls by Location:
-View relative call volume by latitude and longitude across the Bronx, Manhattan, Brooklyn, Staten Island, and Queens. Filter the number of data points shown and the dates in the visualization. 
+View relative call volume by latitude and longitude across the Bronx, Manhattan, Brooklyn, Staten Island, and Queens. Filter the number of data points shown and the dates used in the visualization. As users drag the date slider from one point to another, the dashboard animates call movement so that users can see gradual changes over time. 
 ![](mapgif.gif)
 
 ### Calls by Category:
@@ -26,3 +26,5 @@ $ pip install requirements.txt
 # Run the app through bokeh server
 $ bokeh serve --show main.py
 ```
+
+## Credits:
