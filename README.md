@@ -1,7 +1,8 @@
 # NYC_311_Dash
-311 is a non-emergency phone number that people can call in many cities to find information about services, make complaints, or report problems like graffiti or road damage. Curious about the effects of the pandemic and BLM protests on the volume and location of these calls, I created an interactive dashboard in Bokeh to explore the effects of recent events on 311 call volume. 
+Interactive bokeh dashboard to visualize 311 (non-emergency) call activity in NYC, since the beginning of 2020 onwards. 
 
 ### Calls by Location:
+View relative call volume by latitude and longitude across the Bronx, Manhattan, Brooklyn, Staten Island, and Queens. Filter the number of data points shown and the dates in the visualization. 
 ![](mapgif.gif)
 
 ### Calls by Category:
@@ -14,7 +15,14 @@
 ![](typegif.gif)
 
 ## Setup:
-1. `git clone https://github.com/christinejiang11/NYC_311_Dash.git`
-2. `pip install requirements.txt`
-3. `bokeh serve --show main.py`
+To clone and run this application, you'll need [Git](https://git-scm.com/) installed on your computer. From your command line:
+```
+# Clone this repository
+$ git clone https://github.com/christinejiang11/NYC_311_Dash.git
 
+# Install necessary libraries
+$ pip install requirements.txt
+
+# Run the app through bokeh server
+$ bokeh serve --show main.py
+```
