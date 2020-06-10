@@ -26,8 +26,8 @@ A heatmap displaying call volume by complaint description / call type.
 ## Setup:
 To clone and run this application, you'll need the following:
 - [Git](https://git-scm.com/) installed on your computer. 
-- An application token for the Socrata Open Data API. To do this, create an account with [OpenData](https://opendata.socrata.com/login), go to Developer Settings in the left-hand navigation bar, and pick "Create New App Token". Then copy the generated App Token to a json file named 'client_secret'. 
-- 
+- A Google Developer account to generate credentials used to access a google account. To do this, follow the instructions on the [pygsheets documentation](https://pygsheets.readthedocs.io/en/stable/authorization.html). Rename your credentials file 'client_secret.json'. 
+- An application token for the Socrata Open Data API, which will be used to authenticate access to the 311 calls dataset. To do this, create an account with [OpenData](https://opendata.socrata.com/login), go to Developer Settings in the left-hand navigation bar, and pick "Create New App Token". Then copy the generated App Token to your client_secret.json file. 
 
 After meeting these requirements, run the following from your command line:
 ```
@@ -41,7 +41,9 @@ $ pip install requirements.txt
 $ bokeh serve --show main.py
 ```
 
-## Project outline:
-
-
 ## Credits:
+The following libraries were used in this project:
+- bokeh
+- sodapy
+- pygsheets
+- fuzzywuzzy
