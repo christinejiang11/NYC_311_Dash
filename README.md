@@ -3,27 +3,27 @@ Interactive [Bokeh](https://docs.bokeh.org/en/latest/index.html) dashboard to vi
 
 For all visualizations, users can drag the date slider to one point to another to animate call volume movement and observe gradual shifts over time. Each tab also allows users to select a combination of the five boroughs and includes tooltips to display exact counts when hovered over. 
 
-### Calls by Location:
+### Calls by Location
 View relative call volume by latitude and longitude across the Bronx, Manhattan, Brooklyn, Staten Island, and Queens. 
 
 ![](mapgif.gif)
 
-### Calls by Category:
+### Calls by Category
 Call volume breakdown by borough and category, where category options include agency name (NYPD, Dept. of Housing, Dept. of Transportation, etc.), complaint type, zip code, status (resolved, closed, unresolved, etc.), location type (apartment, commercial, school, etc.) and city. 
 
 ![](categorygif.gif)
 
-### Calls by Time:
+### Calls by Time
 A heatmap displaying call volume broken down by day of the week and time of the day. 
 
 ![](timegif.gif)
 
-### Calls by Type:
+### Calls by Type
 A heatmap displaying call volume by complaint description / call type. 
 
 ![](typegif.gif)
 
-## Setup:
+## Setup
 To clone and run this application, you'll need the following:
 - [Git](https://git-scm.com/) installed on your computer. 
 - A Google Developer account to generate credentials used to access a google account. To do this, follow the instructions on the [pygsheets documentation](https://pygsheets.readthedocs.io/en/stable/authorization.html). Rename your credentials file 'client_secret.json'. 
@@ -41,9 +41,13 @@ $ pip install requirements.txt
 $ bokeh serve --show main.py
 ```
 
-## Credits:
+## Libraries
 The following libraries were used in this project:
-- bokeh
-- sodapy
-- pygsheets
-- fuzzywuzzy
+- [bokeh](https://docs.bokeh.org/en/latest/index.html)
+- [sodapy](https://github.com/xmunoz/sodapy)
+- [pygsheets](https://pygsheets.readthedocs.io/en/stable/)
+- [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy)
+- [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)
+- [numpy](https://numpy.org)
+- [json](https://docs.python.org/3/library/json.html)
+
