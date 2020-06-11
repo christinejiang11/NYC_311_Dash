@@ -1,7 +1,7 @@
 # NYC_311_Dash
 Interactive [Bokeh](https://docs.bokeh.org/en/latest/index.html) dashboard to visualize 311 (non-emergency) call activity in NYC since the beginning of 2020 onwards. The dashboard is powered by the [311 Service Requests](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9) dataset from NYC Open Data.
 
-For all visualizations, users can drag the date slider to one point to another to animate call volume movement and observe gradual shifts over time. Each tab also allows users to select a combination of the five boroughs and includes tooltips to display exact counts when hovered over. The dashboard can be used to better understand the fluctuations in 311 call volume and better allocate resources and prioritize cases given trends in the reason, location, and time of these calls. 
+For all visualizations, users can drag the date slider to one point to another to animate call volume movement and observe gradual shifts over time. Each tab also allows users to select a combination of the five boroughs and includes tooltips to display exact counts when hovered over. The dashboard can be used to more deeply understand fluctuations in 311 call volume and subsequently better allocate resources and prioritize cases given trends in the reason, location, and time of these calls. 
 
 ### Calls by Location
 View relative call volume by latitude and longitude across the Bronx, Manhattan, Brooklyn, Staten Island, and Queens. 
